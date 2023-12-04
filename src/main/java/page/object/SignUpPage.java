@@ -1,4 +1,4 @@
-package PageObject;
+package page.object;
 
 import io.qameta.allure.Step;
 import io.restassured.filter.log.RequestLoggingFilter;

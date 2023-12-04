@@ -1,6 +1,7 @@
-import PageObject.*;
+import page.object.*;
 import org.junit.After;
 import org.openqa.selenium.WebDriver;
+import page.object.*;
 
 public class BaseTest {
     WebDriver webDriver = BrowserSwitcher.get("chrome");

@@ -1,4 +1,4 @@
-package PageObject;
+package page.object;
 
 import io.qameta.allure.Step;
 import org.junit.Assert;
@@ -62,7 +62,7 @@ public class MainPage {
     }
 
     @Step("Active tab check")
-    public void checkActiveTab(String tab) {
-        Assert.assertEquals(webDriver.findElement(activeButton).getText(), tab);
+    public String getActiveTab() {
+        return webDriver.findElement(activeButton).getText();
     }
 }

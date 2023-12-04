@@ -1,4 +1,5 @@
 import io.qameta.allure.Description;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,21 +15,21 @@ public class MainPageTest extends BaseTest {
     @Test
     @Description("checking if 'Булки' tab is active")
     public void checkIfBunsTabActive() {
-        mainPage.checkActiveTab("Булки");
+        Assert.assertEquals(mainPage.getActiveTab(), "Булки");
     }
 
     @Test
     @Description("clicking on 'Соусы' tab and checking if it's active")
     public void clickSauseTabAndCheckActivity() {
         mainPage.sauseButtonClick();
-        mainPage.checkActiveTab("Соусы");
+        Assert.assertEquals(mainPage.getActiveTab(), "Соусы");
     }
 
     @Test
     @Description("clicking on 'Начинки' tab and checking if its active")
     public void clickFillingTabAndCheckActivity() {
         mainPage.fillingButtonClick();
-        mainPage.checkActiveTab("Начинки");
+        Assert.assertEquals(mainPage.getActiveTab(), "Начинки");
     }
 
 }
